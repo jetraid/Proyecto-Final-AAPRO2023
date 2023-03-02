@@ -18,6 +18,11 @@ body {
     
     margin:0;
     line-height: 1.6;
+    background-color: red;
+    max-width: 100%;
+    border: 1px solid black;
+    
+
 }
 
 /*Inicio Header*/
@@ -37,13 +42,14 @@ a{
 .logo{
     margin: 0;
     font-size: 1.5em;
+    
 
 }
 
 .navppal{
     margin-top: 5px;
-
 }
+    
 
 .logo a,
 .navppal a {
@@ -57,19 +63,51 @@ a{
     padding-bottom: .5em;
     border: 1px solid blue;
     background-color: beige;
+    width: 90%;
+   
+    
+    
+    
+    
+
 
 }
 
 .carousel {
+    
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    margin-top: 100px;
+    
 }
 
 /* fin header*/ 
 
 /* Inicio body con GRID */
 
+.contenedorMain{ 
+    display: grid;
+    grid-template-columns: repeat(1, 1Fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    justify-items: stretch; 
+    text-align: center;
+    grid-auto-flow: row;
+    
+}
+
+.contenedorMain div {    
+   
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+}
+
+.contenedorMain div img {
+    width:100%;
+    object-fit: cover;
+}
 
 /* fin body con grid*/
 
@@ -88,15 +126,24 @@ a{
     align-items: center;
     width: 80%;
     margin: 0 auto;
+    
+}
+.contenedorMain{
+    grid-template-columns: repeat(2, 1Fr);
+}
 
 
 /*media query monitor*/
 
-}
+
 @media (min-width: 1025px) {
 	.header {
 		flex-direction: row;
 		justify-content: space-between;
 	}
-}
+    .contenedorMain{
+        grid-template-columns: repeat(3, 1Fr);
+
+    }
+
 }
