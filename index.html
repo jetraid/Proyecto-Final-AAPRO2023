@@ -46,7 +46,7 @@
               <span class="visually-hidden">Siguiente</span>
             </button>
           </div>
-        
+        <div class="contenedorgrid">
             <div class="contenedorMain"><!-- Contenedor MAIN cartas de productos hecha con GRID-->
 
                 <div class="uno">
@@ -98,12 +98,12 @@
                     <p>MCP 737</p>
                     <a href="#">Detalles</a>
                 </div>
-
+            
 
 
 
             </div><!-- Fin Contenedor MAIN-->
-
+        </div>
             <aside>
 
                 <div class="contenedor-aside"><!-- Contenedor ASIDE  Notas tipo blog-->
@@ -121,17 +121,16 @@
                     <section class="contacto">
                         <form action="#" method="post">
 
-                            <label for="nombre">Nombre y Apellido</label>
-                            <input id="nombre" type="text" name="nombyap" required>
+                            <input id="nombre" type="text" name="nombyap" placeholder="Nombre y apelldo" required>
                             <br>
 
 
-                            <label for="email">e-mail</label>
-                            <input id="email" type="email" name="mail" required>
+        
+                            <input id="email" type="email" name="mail" placeholder="e-mail" required>
                             <br>
                             
-                            Sexo
-                            <br>
+                            <div class="sexo"><p> Sexo</p>
+                            
                             <label for="fe">Femenino</label>
                             <input id="fe" type="radio" name="sexo" value="feme">
                             <br>
@@ -141,8 +140,9 @@
                             <label for="ot">Otro</label>
                             <input id="ot" type="radio" name="sexo" value="otro">
                             <br>
+                            </div> 
                             
-                            <label for="mensaje">Mensaje</label>
+                            
                             <textarea name="mensaje" placeholder="Deje su mensaje aquí"></textarea>
                             <br>
                             <input type="checkbox" name="acepto" id="acepto">
@@ -158,8 +158,7 @@
 
 
 
-                    </section>
-
+                    
 
                     <section class="Links"><!--Por ahora van los mios, se cambian cuando genere las redes--------------------------->
                         <a href="#">Facebook</a>

@@ -7,78 +7,84 @@ body
 ------------------------------*/
 
 * {
+
     margin: 0;
     padding: 0;
- 
     box-sizing: border-box; /*para que los contenedores se escalen para adentro*/
+
 }
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
-    
     margin:0;
     line-height: 1.6;
-    background-color: red;
     max-width: 100%;
-    border: 1px solid black;
-    
 
 }
 
 /*Inicio Header*/
 
 ul{
+
     margin: 0;
     padding: 0;
     list-style: none;
+    
 }
 
 
 a{
+
     text-decoration: none;
 
 }
 
 .logo{
+
     margin: 0;
     font-size: 1.5em;
-    
 
 }
 
 .navppal{
+
     margin-top: 5px;
+    
 }
     
 
 .logo a,
 .navppal a {
+
     padding: 10px 15px;
     text-align: center;
     display: block;
+
 }
 
-.header{
+header{
+
     padding-top: .5em;
     padding-bottom: .5em;
     border: 1px solid blue;
     background-color: beige;
     width: 90%;
    
-    
-    
-    
-    
-
-
 }
 
 .carousel {
     
     display: flex;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
-    margin-top: 100px;
+    height: 200px;
+    
+}
+.carousel img{
+
+    height: 200px;
+    object-fit: inherit;
     
 }
 
@@ -86,42 +92,95 @@ a{
 
 /* Inicio body con GRID */
 
+.contenedorgrid{
+
+    width: 80%;
+    margin: 0 auto; /*centrar contenedor*/
+    margin-top: 10px;
+
+}
+
 .contenedorMain{ 
+
     display: grid;
     grid-template-columns: repeat(1, 1Fr);
     grid-template-rows: auto;
-    grid-gap: 10px;
-    justify-items: stretch; 
-    text-align: center;
+    grid-gap: 5px;
     grid-auto-flow: row;
-    
+    width: 100%;
+       
 }
 
 .contenedorMain div {    
    
-    width: 90%;
+    width:100%;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
+
 }
 
 .contenedorMain div img {
     width:100%;
     object-fit: cover;
+
 }
 
 /* fin body con grid*/
 
+/* formulario*/
+
+footer{
+    width: 80%;
+    margin: 0 auto;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+form input[type=text],
+form input[type=email] {
+    width: 50%;
+}
+
+div .sexo{
+    border: 1px solid blue;
+    Width: 30%;
+}
+textarea{
+    width: 50%;
+    height: 100px;
+}
 
 
-/* media query celular*/
+
+section .Links{
+text-align: center;
+}
+
+section .copyright{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* media query celular
 
 @media (min-width: 769px) {
 	
 .header,
 .navppal{
+
     display: flex;
+
 }
 .header{
+
     flex-direction: column;
     align-items: center;
     width: 80%;
@@ -129,7 +188,10 @@ a{
     
 }
 .contenedorMain{
+
     grid-template-columns: repeat(2, 1Fr);
+
+}
 }
 
 
@@ -137,13 +199,17 @@ a{
 
 
 @media (min-width: 1025px) {
+
 	.header {
+
 		flex-direction: row;
 		justify-content: space-between;
+
 	}
     .contenedorMain{
+
         grid-template-columns: repeat(3, 1Fr);
 
     }
 
-}
+} 
