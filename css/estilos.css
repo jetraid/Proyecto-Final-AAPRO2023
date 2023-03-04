@@ -17,11 +17,10 @@ body
 body {
 
     font-family: Arial, Helvetica, sans-serif;
-    margin:0;
-    line-height: 1.6;
     max-width: 100%;
 
 }
+
 
 /*Inicio Header*/
 
@@ -29,28 +28,29 @@ ul{
 
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none; 
     
 }
 
 
 a{
 
-    text-decoration: none;
+    text-decoration: none; /*sin subrayado*/
 
 }
 
 .logo{
 
     margin: 0;
-    font-size: 1.5em;
+    
 
 }
 
 .navppal{
 
     margin-top: 5px;
-    
+    display: flex;
+    position:fixed;
 }
     
 
@@ -59,32 +59,53 @@ a{
 
     padding: 10px 15px;
     text-align: center;
-    display: block;
+    display: flex;
+    
 
 }
 
+.logo {
+    background-color: burlywood;
+    margin: 0 auto;
+    justify-content: center;
+}
 header{
 
     padding-top: .5em;
     padding-bottom: .5em;
     border: 1px solid blue;
     background-color: beige;
-    width: 90%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 2000;
+    margin: 0 auto;
+    flex-direction: column;
+    
+    
+   
+    
    
 }
 
+
+.micarro { 
+    margin-top: 100px;
+}
 .carousel {
     
+    
     display: flex;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    height: 200px;
+    
+   
     
 }
 .carousel img{
 
     height: 200px;
-    object-fit: inherit;
+    
     
 }
 
@@ -94,7 +115,7 @@ header{
 
 .contenedorgrid{
 
-    width: 80%;
+    width: 100%;
     margin: 0 auto; /*centrar contenedor*/
     margin-top: 10px;
 
@@ -108,6 +129,8 @@ header{
     grid-gap: 5px;
     grid-auto-flow: row;
     width: 100%;
+    z-index: 1000;
+    
        
 }
 
@@ -115,6 +138,8 @@ header{
    
     width:100%;
     text-align: center;
+    padding: 5px;border: 1px solid black;
+    border-radius: 5px;
     padding: 5px;
 
 }
@@ -125,31 +150,69 @@ header{
 
 }
 
+.contenedorMain div h5{
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+.contenedorMain div p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.contenedorMain div a{
+    background-color: aqua;
+    color: black;
+    padding: 10px;
+    border-radius: 3px;
+    
+}
+
 /* fin body con grid*/
 
 /* formulario*/
 
-footer{
-    width: 80%;
+ 
+
+
+.contacto{
+    width: 100%;
     margin: 0 auto;
     background-color: aliceblue;
-    padding: 10px;
+    padding: 5px;
+    margin: 5px;
+    
 }
 
 form input[type=text],
 form input[type=email] {
     width: 50%;
+    padding: 5px;
+    margin: 5px;
 }
 
 div .sexo{
     border: 1px solid blue;
     Width: 30%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
 }
 textarea{
     width: 50%;
     height: 100px;
+    padding: 5px;
+    margin: 5px;
+    height:80px;
+    max-height: 150px;
 }
 
+form input[type=submit]{
+    background-color: green;
+    padding:10px;
+    border-radius: 5px;
+}
 
 
 section .Links{
@@ -160,16 +223,23 @@ section .copyright{
     text-align: center;
 }
 
+.micarro{
+    background-color: red;
+    margin: 0 auto;
+    
+   
+    
+}
+
+.carrogato{
+   
+}
 
 
 
+/*------------------------------------------------*/
 
-
-
-
-
-
-/* media query celular
+/* media query tablet de 769 para arriba*/
 
 @media (min-width: 769px) {
 	
@@ -183,10 +253,12 @@ section .copyright{
 
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    
     
 }
+
+
 .contenedorMain{
 
     grid-template-columns: repeat(2, 1Fr);
@@ -195,7 +267,7 @@ section .copyright{
 }
 
 
-/*media query monitor*/
+/*media query monitor de 1025 para arriba*/
 
 
 @media (min-width: 1025px) {
@@ -213,3 +285,5 @@ section .copyright{
     }
 
 } 
+
+*/
